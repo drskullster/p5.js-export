@@ -6,6 +6,13 @@ Export high resolution snapshots from p5.js sketches
 
 ## How to use
 
+Import the library in your html `<head>` tag :
+
+```html
+<script src="https://unpkg.com/p5.js-export/p5.js-export.js"></script>
+```
+Then insert `saveForPrint()` in your code :
+
 ```js
 saveForPrint("sketch.jpg", "A3", 300);
 ```
