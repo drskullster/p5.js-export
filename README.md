@@ -35,6 +35,11 @@ function keyPressed() {
 saveForPrint("sketch.jpg", "A3", 300, 10); // save 10 frames
 ```
 
+## Known limitations
+
+* The frames saved are not the previous ones, but the future ones. In that sense, **it's not possible to export sketches based on user actions**. One possible solution would be to have a notion of recording (start a recording, then move mouse, then save).
+* Background has to be set in `draw()` function or it will be ignored. One possible solution would be to pass your background as an option in the `saveForPrint()` function.
+
 ## Why ?
 
 I was looking for a simple way to print sketches at high resoution but couldn't find one. The goal was to have a unique method
@@ -42,7 +47,4 @@ as to mimic p5.js `save()` method.
 
 ## How it works
 
-When calling `saveForPrint()`, the canvas is scaled to the desired resolution ("A4", "A3", "A2", "A1", "A0"), `draw()` is called 
-(once or multiple times) then the p5 `save()` method is called and we reduce the canvas to its original size.
-
-It's pretty invasive but I haven't experienced any side effects yet. I'd love to get some feedback
+When calling `saveForPrint()`, the canvas is scaled to the desired resolution ("A4", "A3", "A2", "A1", "A0"), `draw()` is called (once or multiple times) then the p5 `save()` method is called and we reduce the canvas to its original size.
