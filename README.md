@@ -2,6 +2,9 @@
 
 Export high resolution snapshots from p5.js sketches
 
+Update 2022-06-25:
+* When a .png is exported, the resolution (eg. 300 DPI) is also encoded in the PNG image.
+
 **Note:** it's very much a work in progress. Currently it only works with A* ISO sizes in portrait orientation.
 
 ## How to use
@@ -26,6 +29,7 @@ function keyPressed() {
   }
 }
 ```
+
 
 ### Save multiple frames
 
